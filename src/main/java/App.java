@@ -6,7 +6,28 @@ import static spark.Spark.*;
 import java.util.ArrayList;
 
 public class App{
-  public static void main(String[] args) {}
+  public static void main(String[] args) {
+    staticFileLocation("/public");
+    String layout = "templates/layout.vtl";
+
+    get ("/", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("template", "templates/coinCombinations.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    get ("/change", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("template", "templates/change.vtl");
+
+      String stringCents = request.queryParams("userCents");
+      Integer cents = Integer.parseInt(stringCents);
+      String userChange = App.getChange(cents);
+
+      model.put("userChange", userChange);
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+  }
 
   public static String getChange(Integer cents) {
     HashMap<Integer, String> coinStrings = new HashMap<Integer, String>();
@@ -58,7 +79,7 @@ public class App{
     for (int i = 0; i < 4; i++) {
         if (coinValues.get(i) > 0) {
           if (coinValues.get(i) == 1) {
-          returnString += ("1 " + coinStrings.get(i));
+          returnString += ("1 " + coinStrings.get(i)) + " ";
           } else {
             returnString += String.format("%d " + coinStrings.get(i) + "s ", coinValues.get(i));
           }

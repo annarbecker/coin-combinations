@@ -19,7 +19,10 @@ public class AppTest extends FluentTest {
   @Test
   public void rootTest() {
       goTo("http://localhost:4567/");
-      assertThat(pageSource()).contains("");
+      assertThat(pageSource()).contains("Coin Combinations");
+      fill("#userCents").with("99");
+      submit(".btn");
+      assertThat(pageSource()).contains("3 quarters 2 dimes 4 pennys");
   }
 
   @Test
