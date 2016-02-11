@@ -42,30 +42,37 @@ public class App{
      coinValues.put(2, 0);
      coinValues.put(3, 0);
 
+    Integer quarterCount = 20;
+    Integer dimeCount = 50;
+    Integer nickelCount = 100;
+
     String returnString = "";
-    while (cents > 24) {
+    while ((cents > 24) && (quarterCount > 0)) {
       if(!coinValues.containsKey(0)) {
         coinValues.put(0, 1);
       } else {
         coinValues.put(0, coinValues.get(0) + 1);
       }
       cents -= 25;
+      quarterCount --;
     }
-    while (cents > 9) {
+    while ((cents > 9) && (dimeCount > 0)) {
       if(!coinValues.containsKey(1)) {
         coinValues.put(1, 1);
       } else {
         coinValues.put(1, coinValues.get(1) + 1);
       }
       cents -= 10;
+      dimeCount --;
     }
-    while (cents > 4) {
+    while ((cents > 4) && (nickelCount > 0)) {
       if(!coinValues.containsKey(2)) {
         coinValues.put(2, 1);
       } else {
         coinValues.put(2, coinValues.get(2) + 1);
       }
       cents -= 5;
+      nickelCount --;
     }
     while (cents > 0) {
       if(!coinValues.containsKey(3)) {
