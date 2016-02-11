@@ -21,16 +21,6 @@ public class App{
      coinValues.put(2, 0);
      coinValues.put(3, 0);
 
-    // Integer quarters = 0;
-    // Integer dimes = 0;
-    // Integer nickels = 0;
-    // Integer pennies = 0;
-    // ArrayList<Integer> coins = new ArrayList<Integer>();
-    //   coins.add(quarters);
-    //   coins.add(dimes);
-    //   coins.add(nickels);
-    //   coins.add(pennies);
-
     String returnString = "";
     while (cents > 24) {
       if(!coinValues.containsKey(0)) {
@@ -75,35 +65,6 @@ public class App{
         }
     }
 
-
-    // if (quarters >= 1) {
-    //   if (quarters == 1) {
-    //     returnString += "1 quarter";
-    //   } else {
-    //     returnString += String.format("%d quarters ", quarters);
-    //   }
-    // }
-    // if (dimes >= 1) {
-    //   if (dimes == 1) {
-    //     returnString += "1 dime";
-    //   } else {
-    //     returnString += String.format("%d dimes ", dimes);
-    //   }
-    // }
-    // if (nickels >= 1) {
-    //   if (nickels == 1) {
-    //     returnString += "1 nickel";
-    //   } else {
-    //     returnString += String.format("%d nickels ", nickels);
-    //   }
-    // }
-    // if (pennies >= 1) {
-    //   if(pennies == 1) {
-    //     returnString += "1 penny";
-    //   } else {
-    //     returnString += String.format("%d pennies", pennies);
-    //   }
-    // }
     return returnString.trim();
   }
 }

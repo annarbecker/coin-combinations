@@ -31,7 +31,7 @@ public class AppTest extends FluentTest {
   @Test
   public void getChange_changeCentsToPennies_pennies() {
     App testApp = new App();
-    assertEquals("2 pennies", testApp.getChange(2));
+    assertEquals("2 pennys", testApp.getChange(2));
   }
 
   @Test
@@ -61,6 +61,6 @@ public class AppTest extends FluentTest {
   @Test
   public void getChange_changeCentsToMixedCoins_coins() {
     App testApp = new App();
-    assertEquals("3 quarters 2 dimes 4 pennies", testApp.getChange(99));
+    assertEquals("3 quarters 2 dimes 4 pennys", testApp.getChange(99));
   }
 }
