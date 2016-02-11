@@ -23,14 +23,21 @@ public class AppTest extends FluentTest {
   }
 
   @Test
-  public void getChange_changeCentsToCoins_penny() {
+  public void getChange_changeCentToPenny_penny() {
     App testApp = new App();
     assertEquals("1 penny", testApp.getChange(1));
   }
 
   @Test
-  public void getChange_changeCentsToCoins_pennies() {
+  public void getChange_changeCentsToPennies_pennies() {
     App testApp = new App();
     assertEquals("2 pennies", testApp.getChange(2));
   }
+
+  @Test
+  public void getChange_changeCentsToNickel_nickel() {
+    App testApp = new App();
+    assertEquals("1 nickel", testApp.getChange(5));
+  }
+
 }
