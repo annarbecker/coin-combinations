@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2016-02-11T16:56:30" hostname="epicodus-62.local" time="0.167">
+<testsuite name="AppTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-02-11T17:01:37" hostname="epicodus-62.local" time="0.179">
   <properties/>
   <testcase name="getChange_changeCentToPenny_penny" classname="AppTest" time="0.003"/>
-  <testcase name="rootTest" classname="AppTest" time="0.149"/>
-  <testcase name="getChange_changeCentsToPennies_pennies" classname="AppTest" time="0.001"/>
-  <testcase name="getChange_changeCentsToNickel_nickel" classname="AppTest" time="0.0"/>
+  <testcase name="getChange_changeCentsToDime_dimes" classname="AppTest" time="0.001"/>
+  <testcase name="getChange_changeCentsToDime_dime" classname="AppTest" time="0.0"/>
+  <testcase name="rootTest" classname="AppTest" time="0.15"/>
+  <testcase name="getChange_changeCentsToPennies_pennies" classname="AppTest" time="0.0"/>
+  <testcase name="getChange_changeCentsToNickel_nickel" classname="AppTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

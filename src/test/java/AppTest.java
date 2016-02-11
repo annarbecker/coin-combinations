@@ -40,4 +40,15 @@ public class AppTest extends FluentTest {
     assertEquals("1 nickel", testApp.getChange(5));
   }
 
+  @Test
+  public void getChange_changeCentsToDime_dime() {
+    App testApp = new App();
+    assertEquals("1 dime", testApp.getChange(10));
+  }
+
+  @Test
+  public void getChange_changeCentsToDime_dimes() {
+    App testApp = new App();
+    assertEquals("2 dimes", testApp.getChange(20));
+  }
 }

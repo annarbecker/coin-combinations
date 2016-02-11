@@ -8,9 +8,14 @@ public class App{
   public static void main(String[] args) {}
 
   public static String getChange(Integer cents) {
-    Integer pennies = 0;
+    Integer dimes = 0;
     Integer nickels = 0;
+    Integer pennies = 0;
     String returnString = "";
+    while (cents > 9) {
+      dimes += 1;
+      cents -= 10;
+    }
     while (cents > 4) {
       nickels += 1;
       cents -= 5;
@@ -18,6 +23,13 @@ public class App{
     while (cents > 0) {
       pennies += 1;
       cents --;
+    }
+    if (dimes >= 1) {
+      if (dimes == 1) {
+        returnString += "1 dime";
+      } else {
+        returnString += String.format("%d dimes", dimes);
+      }
     }
     if (nickels >= 1) {
       if (nickels == 1) {
