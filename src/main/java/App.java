@@ -8,10 +8,15 @@ public class App{
   public static void main(String[] args) {}
 
   public static String getChange(Integer cents) {
+    Integer quarters = 0;
     Integer dimes = 0;
     Integer nickels = 0;
     Integer pennies = 0;
     String returnString = "";
+    while (cents > 24) {
+      quarters += 1;
+      cents -= 25;
+    }
     while (cents > 9) {
       dimes += 1;
       cents -= 10;
@@ -23,6 +28,13 @@ public class App{
     while (cents > 0) {
       pennies += 1;
       cents --;
+    }
+    if (quarters >= 1) {
+      if (quarters == 1) {
+        returnString += "1 quarter";
+      } else {
+        returnString += String.format("%d quarters", quarters);
+      }
     }
     if (dimes >= 1) {
       if (dimes == 1) {

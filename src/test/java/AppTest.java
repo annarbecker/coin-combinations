@@ -51,4 +51,10 @@ public class AppTest extends FluentTest {
     App testApp = new App();
     assertEquals("2 dimes", testApp.getChange(20));
   }
+
+  @Test
+  public void getChange_changeCentsToQuarter_quarter() {
+    App testApp = new App();
+    assertEquals("1 quarter", testApp.getChange(25));
+  }
 }
