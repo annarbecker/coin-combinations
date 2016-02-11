@@ -33,21 +33,21 @@ public class App{
       if (quarters == 1) {
         returnString += "1 quarter";
       } else {
-        returnString += String.format("%d quarters", quarters);
+        returnString += String.format("%d quarters ", quarters);
       }
     }
     if (dimes >= 1) {
       if (dimes == 1) {
         returnString += "1 dime";
       } else {
-        returnString += String.format("%d dimes", dimes);
+        returnString += String.format("%d dimes ", dimes);
       }
     }
     if (nickels >= 1) {
       if (nickels == 1) {
         returnString += "1 nickel";
       } else {
-        returnString += String.format("%d nickels", nickels);
+        returnString += String.format("%d nickels ", nickels);
       }
     }
     if (pennies >= 1) {
@@ -57,6 +57,6 @@ public class App{
         returnString += String.format("%d pennies", pennies);
       }
     }
-    return returnString;
+    return returnString.trim();
   }
 }
