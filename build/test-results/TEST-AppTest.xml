@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AppTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-02-11T16:32:59" hostname="epicodus-62.local" time="0.161">
+  <properties/>
+  <testcase name="getChange_changeCentsToCoins_penny" classname="AppTest" time="0.003"/>
+  <testcase name="rootTest" classname="AppTest" time="0.153"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

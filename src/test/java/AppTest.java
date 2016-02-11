@@ -22,5 +22,9 @@ public class AppTest extends FluentTest {
       assertThat(pageSource()).contains("");
   }
 
-  
+  @Test
+  public void getChange_changeCentsToCoins_penny() {
+    App testApp = new App();
+    assertEquals("1 penny", testApp.getChange(1));
+  }
 }
